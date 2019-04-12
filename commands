@@ -1,0 +1,15 @@
+--command -- /bin/sh -c "echo hello world"
+-- /bin/sh -c "echo hello world"
+
+command: ["/bin/sh","-c","echo hello world"]
+
+command: ["/bin/sh -c","echo hello world"]
+
+command: ["/bin/sh"]
+args: ["-c",  "while true; do echo hello; sleep 10;done"]
+
+command: ["/bin/sh -c"]
+args: ["while true; do echo hello; sleep 10;done"]
+
+
+args: [/bin/sh, -c,'i=0; while true; do echo "$i: $(date)"; i=$((i+1)); sleep 1; done']
